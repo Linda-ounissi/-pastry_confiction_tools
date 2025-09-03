@@ -9,3 +9,4 @@ Then("I should see a search button to see all tool", () => {
     .should('contain.text', 'See All Tools');
 
 });
+

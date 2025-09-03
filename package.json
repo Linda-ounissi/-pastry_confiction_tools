@@ -2,9 +2,6 @@
   "name": "_pastry_confiction_tool",
   "private": true,
   "version": "0.1.0",
-  "resolutions": {
-    "node-sass": "npm:sass"
-  },
   "dependencies": {
     "@badeball/cypress-cucumber-preprocessor": "^23.0.0",
     "@cypress/browserify-preprocessor": "^3.0.2",
@@ -17,18 +14,17 @@
     "flatpickr": "^4.6.9",
     "jquery": "^3.6.0",
     "mapbox-gl": "^2.1.1",
-    "node-sass": "npm:sass",
     "popper.js": "^1.16.1",
-    "sass": "^1.92.0",
     "turbolinks": "^5.2.0"
   },
   "devDependencies": {
     "concurrently": "^9.2.1",
     "cypress": "^12.17.4",
+    "sass": "^1.92.0",
     "webpack-dev-server": "^3.11.2"
   },
   "scripts": {
-  "dev": "concurrently \"rails s\" \"./bin/webpack-dev-server\"",
-  "test": "cypress open"
+    "dev": "NODE_OPTIONS=--openssl-legacy-provider concurrently \"rails s\" \"./bin/webpack-dev-server\"",
+    "test": "cypress open"
   }
 }
